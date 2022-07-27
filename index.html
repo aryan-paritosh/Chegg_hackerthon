@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -24,125 +25,199 @@
   </head>
   <body>
     <div class="container my-5">
-      <img src="img/chegg.png" alt="image" />
-      <div class="icon-bar my-2">
-        <div class="icon">
-          <div class="btn-group dropup">
-            <button
-              type="button"
-              class="btn"
-              data-bs-toggle="dropdown"
-              data-bs-placement="top"
-              title="language"
-              aria-expanded="false"
-            >
-              <i class="fa-solid fa-language"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">English</a></li>
-              <li><a class="dropdown-item" href="#">Hindi</a></li>
-              <li><a class="dropdown-item" href="#">Punjabi</a></li>
-            </ul>
-          </div>
-          <div>
-          
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn"
-              data-bs-toggle="modal"
-              title="buy tools"
-              data-bs-target="#staticBackdrop"
-            >
-            <i class="fa-solid fa-gear"></i>
-            </button>
+      <div class="main">
+        <img src="img/adobestock_86405056.jpeg" class="my-3" alt="image" />
+        <div id="lang"></div>
 
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="staticBackdrop"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header text-center">
-                    <h5 class="modal-title" id="staticBackdropLabel">
-                      Materials used
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <h3>ITEM 1 <button class="btn btn-success">buy now</button></h3>
-                    <h3>ITEM 2 <button class="btn btn-success">buy now</button></h3>
-                    <h3>ITEM 3 <button class="btn btn-success">buy now</button></h3>
-                   
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    
+        <div class="icon-bar">
+          <div class="icon">
+            <div class="btn-group dropup">
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="dropdown"
+                data-bs-placement="top"
+                title="language"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-language"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                <li><a class="dropdown-item" href="#">Punjabi</a></li>
+              </ul>
+            </div>
+            <div>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                title="buy tools"
+                data-bs-target="#staticBackdrop"
+              >
+                <i class="fa-solid fa-gear"></i>
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <h5 class="modal-title" id="staticBackdropLabel">
+                        Materials used
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <h3>
+                        ITEM 1 <button class="btn btn-success">buy now</button>
+                      </h3>
+                      <h3>
+                        ITEM 2 <button class="btn btn-success">buy now</button>
+                      </h3>
+                      <h3>
+                        ITEM 3 <button class="btn btn-success">buy now</button>
+                      </h3>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <button
-              type="button"
-              class="btn"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
+            <div>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-solid fa-audio-description"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="myfunE()"
+                      >ENGLISH</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="myfunH()"
+                      >HINDI</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="myfunO()"
+                      >TELUGU</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#" onclick="myfunT()"
+                      >ASSAMESE</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                </ul>
+              </div>
+            </div>
+            <!-- location -->
+            <div>
+              <button class="btn"
+              data-bs-toggle="modal"
               title="nearby location"
-            >
-            <i class="fa-solid fa-location-dot"></i>
-            </button>
-          </div>
-          <div>
-            <button
-              type="button"
-              class="btn"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="subtitle"
-            >
-              <i class="fa-solid fa-audio-description"></i>
-            </button>
-          </div>
-          <div>
-            <button
-              type="button"
-              class="btn"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="recording"
-            >
-              <i class="fa-solid fa-clapperboard"></i>
-            </button>
-          </div>
-          <div>
-            <button
-              type="button"
-              class="btn"
-              data-bs-toggle="tooltip"
-              data-bs-placement="top"
-              title="get notes"
-            >
-              <i class="fa-solid fa-note-sticky"></i>
-            </button>
+              data-bs-target="#staticBackdrop1"><i class="fa-solid fa-location-dot"></i></button>
+              <div class="modal fade"
+              id="staticBackdrop1"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">NEAR BY LOCATION</h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <h5>location 1</h5>
+                      <p>visit for live demo <a href="#" role="button" class="btn btn-warning popover-test" title="Popover title" data-bs-content="Popover body content is set in this attribute.">contact</a> </p>
+                      <hr>
+                      <h5>location 2</h5>
+                      <p>visit for live demo <a href="#" role="button" class="btn btn-warning popover-test" title="Popover title" data-bs-content="Popover body content is set in this attribute.">contact</a> </p>
+                      
+                      </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="recording"
+                onclick="start()"
+              >
+                <i class="fa-solid fa-clapperboard"></i>
+              </button>
+            </div>
+
+            <div>
+              <button
+                type="button"
+                class="btn"
+                id="page"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="get notes"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+                onclick="download()"
+              >
+                <i class="fa-solid fa-note-sticky"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
