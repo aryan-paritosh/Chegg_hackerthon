@@ -23,8 +23,8 @@ body{
    text-align: center;
    display: block;
   
-   margin-left: 220px;
-   margin-right: 220px;
+   margin-left: 300px;
+   margin-right: 300px;
  
    background-color: rgb(246, 195, 10);
    border-radius: 10px;
@@ -50,7 +50,7 @@ body{
 #lang{
    text-align: center;
     position: absolute;
-    top: 550px;
+    top: 410px;
     left: 600px;
     display:block;
     color: white;
